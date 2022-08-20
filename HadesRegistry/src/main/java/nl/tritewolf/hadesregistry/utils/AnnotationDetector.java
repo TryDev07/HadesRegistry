@@ -123,9 +123,11 @@ public final class AnnotationDetector {
         if (DEBUG) {
             print("Files to scan: %s", files);
         }
-        if (!files.isEmpty()) {
-            detect(new ClassFileIterator(files.toArray(new File[0]), pkgNameFilter));
-        }
+
+        //note Disabled this for now, as it is not needed for the current use case.
+//        if (!files.isEmpty()) {
+//            detect(new ClassFileIterator(files.toArray(new File[0]), pkgNameFilter));
+//        }
     }
 
     public void detect(final File... filesOrDirectories) throws IOException {

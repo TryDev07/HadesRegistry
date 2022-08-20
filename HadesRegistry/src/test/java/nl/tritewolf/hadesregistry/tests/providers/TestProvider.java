@@ -14,6 +14,7 @@ public class TestProvider implements RegistryProvider {
 
     @Override
     public void handle(Class<?> clazz, Class<? extends Annotation> type) {
-        System.out.println("TestProvider.handle: " + clazz.getName() + " " + type.getName());
+        TestAnnotation annotation = clazz.getAnnotation(TestAnnotation.class);
+        System.out.println("TestProvider.handle: " + clazz.getName() + " " + annotation.value());
     }
 }

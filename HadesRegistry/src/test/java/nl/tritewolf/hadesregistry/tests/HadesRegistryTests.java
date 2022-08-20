@@ -3,7 +3,6 @@ package nl.tritewolf.hadesregistry.tests;
 import nl.tritewolf.hadesregistry.HadesRegistry;
 import nl.tritewolf.hadesregistry.components.DaggerHadesComponent;
 import nl.tritewolf.hadesregistry.components.HadesComponent;
-import nl.tritewolf.hadesregistry.registry.RegistryProcessor;
 import nl.tritewolf.hadesregistry.tests.providers.TestProvider;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -16,7 +15,6 @@ public class HadesRegistryTests {
 
     @BeforeAll
     static void setup() {
-//        hadesRegistry = new HadesRegistry();
         Logger.getAnonymousLogger().info("Starting testing:");
     }
 

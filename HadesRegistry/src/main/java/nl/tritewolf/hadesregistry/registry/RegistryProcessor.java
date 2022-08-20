@@ -21,11 +21,13 @@ public class RegistryProcessor {
     }
 
     public void process() {
+        System.out.println(this.registryContainer.getItems());
         this.registryContainer.getItems().forEach(registryProvider -> {
             try {
                 AnnotationDetector annotationDetector = new AnnotationDetector(getReporter(registryProvider));
                 ClassLoader classLoader = this.getClass().getClassLoader();
                 String[] objects = Arrays.stream(Package.getPackages()).map(Package::getName).toArray(String[]::new);
+                System.out.println(Arrays.asList(objects));
                 annotationDetector.detect(classLoader, objects);
             } catch (IOException e) {
                 throw new RuntimeException(e);

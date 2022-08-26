@@ -4,9 +4,6 @@ import nl.tritewolf.hadesregistry.registry.RegistryContainer;
 import nl.tritewolf.hadesregistry.registry.RegistryProcessor;
 import nl.tritewolf.hadesregistry.registry.RegistryProvider;
 
-import javax.inject.Inject;
-
-
 public class HadesRegistry {
 
     private final RegistryContainer registryContainer;

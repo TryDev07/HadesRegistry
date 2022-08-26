@@ -1,14 +1,11 @@
 package nl.tritewolf.hadesregistry.registry;
 
-import nl.tritewolf.hadesregistry.HadesRegistry;
 import nl.tritewolf.hadesregistry.utils.AnnotationDetector;
 import nl.tritewolf.hadesregistry.utils.types.TypeReporter;
 import org.jetbrains.annotations.NotNull;
 
-import javax.inject.Inject;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
 import java.util.Arrays;
 
 public class RegistryProcessor {

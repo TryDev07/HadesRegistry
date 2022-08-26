@@ -1,8 +1,6 @@
 package nl.tritewolf.hadesregistry.tests;
 
 import nl.tritewolf.hadesregistry.HadesRegistry;
-import nl.tritewolf.hadesregistry.components.DaggerHadesComponent;
-import nl.tritewolf.hadesregistry.components.HadesComponent;
 import nl.tritewolf.hadesregistry.tests.providers.TestProvider;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -20,9 +18,7 @@ public class HadesRegistryTests {
 
     @Test
     public void testProcessor() {
-        HadesComponent hadesComponent = DaggerHadesComponent.create();
-        HadesRegistry hadesRegistry = hadesComponent.buildHadesRegistry();
-
+        hadesRegistry = new HadesRegistry();
         hadesRegistry.add(new TestProvider());
         hadesRegistry.process();
     }

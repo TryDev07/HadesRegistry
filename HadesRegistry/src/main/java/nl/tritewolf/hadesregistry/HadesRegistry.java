@@ -12,10 +12,9 @@ public class HadesRegistry {
     private final RegistryContainer registryContainer;
     private final RegistryProcessor registryProcessor;
 
-    @Inject
-    public HadesRegistry(RegistryContainer registryContainer, RegistryProcessor registryProcessor) {
-        this.registryContainer = registryContainer;
-        this.registryProcessor = registryProcessor;
+    public HadesRegistry() {
+        this.registryContainer = new RegistryContainer();
+        this.registryProcessor = new RegistryProcessor(this.registryContainer);
     }
 
     public void add(RegistryProvider registryProvider) {

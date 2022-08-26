@@ -15,7 +15,6 @@ public class RegistryProcessor {
 
     private final RegistryContainer registryContainer;
 
-    @Inject
     public RegistryProcessor(RegistryContainer registryContainer) {
         this.registryContainer = registryContainer;
     }
@@ -27,7 +26,6 @@ public class RegistryProcessor {
                 AnnotationDetector annotationDetector = new AnnotationDetector(getReporter(registryProvider));
                 ClassLoader classLoader = this.getClass().getClassLoader();
                 String[] objects = Arrays.stream(Package.getPackages()).map(Package::getName).toArray(String[]::new);
-                System.out.println(Arrays.asList(objects));
                 annotationDetector.detect(classLoader, objects);
             } catch (IOException e) {
                 throw new RuntimeException(e);

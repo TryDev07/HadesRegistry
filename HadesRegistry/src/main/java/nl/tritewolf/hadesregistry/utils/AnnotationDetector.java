@@ -125,9 +125,9 @@ public final class AnnotationDetector {
         }
 
         //note Disabled this for now, as it is not needed for the current use case.
-//        if (!files.isEmpty()) {
-//            detect(new ClassFileIterator(files.toArray(new File[0]), pkgNameFilter));
-//        }
+        if (!files.isEmpty()) {
+            detect(new ClassFileIterator(files.toArray(new File[0]), pkgNameFilter));
+        }
     }
 
     public void detect(final File... filesOrDirectories) throws IOException {
